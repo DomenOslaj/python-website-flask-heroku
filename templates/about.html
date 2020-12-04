@@ -1,11 +1,13 @@
-<!doctype html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+{% extends "base.html" %}
 
-    </head>
+{% block content %}
 
-    <body>
+    <h3>Name: {{name}}</h3>
+    <h3>Age: {{age}}</h3>
+    <h3>Address: {{address}}</h3>
+    <h2>Best friends:</h2>
+        {%for friend in best_friends%}
+            <p>{{friend}}</p>
+        {% endfor %}
 
-    </body>
-</html>
+{% endblock content %}
